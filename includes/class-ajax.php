@@ -26,7 +26,9 @@ class Ajax {
 
 		//TODO Use get_option('date_format') while converting date
 		$birthdate = date( 'c', strtotime( $birthdate ) );
-		$response  = self::check_cjp_card( $card_number, $birthdate );
+
+		// Validate card
+		$response = self::check_cjp_card( $card_number, $birthdate );
 
 		if ( $response !== true ) {
 			wp_send_json_error( [

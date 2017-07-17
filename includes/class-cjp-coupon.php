@@ -38,9 +38,9 @@ class CJP_Coupon {
 		$coupon->set_usage_limit( $options['usage_limit'] );
 		$coupon->set_description( 'Automatically generated coupon for CJP card ' . $card_number );
 
-		$coupon_id = $coupon->save();
+		$coupon->save();
 
-		return $coupon_id;
+		return $coupon_code;
 	}
 
 }
